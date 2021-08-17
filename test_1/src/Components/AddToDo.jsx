@@ -5,12 +5,13 @@ export const AddToDo = ({ handleAdd }) => {
   const [toDoText, setToDoText] = useState("");
   return (
     <React.Fragment>
-      <Card>
+      <Card className="addtodo">
         <Row>
           <Col md={10}>
             <Form.Control
               type="text"
               value={toDoText}
+              placeholder="Add To Do Items"
               onChange={(e) => setToDoText(e.target.value)}
             />
           </Col>

@@ -21,6 +21,7 @@ export const AddToDo = ({ handleAdd }) => {
                 setToDoText("");
                 handleAdd(toDoText);
               }}
+              disabled={toDoText.length == 0 ? true : false}
             >
               Add
             </Button>

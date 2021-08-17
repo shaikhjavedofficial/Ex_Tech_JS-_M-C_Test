@@ -2,8 +2,8 @@ import React from "react";
 import { ToDoItems } from "./ToDoItems";
 export const ToDoList = () => {
   return (
-    <div>
+    <React.Fragment>
       <ToDoItems />
-    </div>
+    </React.Fragment>
   );
 };

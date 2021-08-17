@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Card, Form, Row, Col } from "react-bootstrap";
+import { Card, Form, Row, Col, Button } from "react-bootstrap";
 
-export const ToDoItems = () => {
+export const ToDoItems = ({ handleDelete, item }) => {
   const [checkBox, setCheckBox] = useState(false);
   return (
     <React.Fragment>
@@ -11,7 +11,10 @@ export const ToDoItems = () => {
             <Form.Check onClick={() => setCheckBox(!checkBox)} />
           </Col>
           <Col>
-            <Form.Label />
+            <Form.Label>{checkBox ? <del>{item}</del> : item}</Form.Label>
+          </Col>
+          <Col md={2}>
+            <Button onClick={() => handleDelete(item)}>Remove</Button>
           </Col>
         </Row>
       </Card>
